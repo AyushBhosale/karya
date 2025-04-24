@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+    <title>Log In</title>
+</head>
+<body>
+    <form class="log-in" method="post">
+        {% csrf_token %}
+        <input type="text" name = "username" class="inp" placeholder="Username" required> <br>
+        {% comment %} <input type="text" name = "email" class="inp" placeholder="Email" required> <br> {% endcomment %}
+        <input type="text" name = "password" class="inp" placeholder="Password" required> <br>
+        <input type="submit" class="sub-btn" value="SignUp">
+    </form>
+</body>
+</html>
