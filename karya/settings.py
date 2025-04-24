@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [    
-    'karya-todo-aaa5cvasffezc6gu.canadacentral-01.azurewebsites.net',  # Your Azure app's domain
+    'karya-todo-aaa5cvasffezc6gu.centralindia-01.azurewebsites.net',  
     'localhost',
     '127.0.0.1',
     ]
