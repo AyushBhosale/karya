@@ -68,6 +68,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           auth-type: SERVICE_PRINCIPAL
+          enable-oidc: false # Explicitly disable OIDC
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
