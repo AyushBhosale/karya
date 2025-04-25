@@ -65,12 +65,13 @@ jobs:
         run: unzip release.zip
 
       
-      - name: Login to Azure
+      - name: Azure Login via OIDC
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_84F536454B294714A142FF2F27E3AC14 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D67F5DF14F86478B9E3A1875AF01BD7D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C14799D6D7AF4E6587BDBA21CDDFCFEC }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
