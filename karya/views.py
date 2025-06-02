@@ -31,7 +31,7 @@ def logIn(request):
 
 def todos(request):
     if not request.user.is_authenticated:
-        return redirect('/login/')  # replace with your login URL
+        return redirect('/login/') 
     if request.method == "POST":
         if 'delete_task' in request.POST:
             # Handle delete action
